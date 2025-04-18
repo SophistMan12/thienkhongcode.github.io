@@ -1,19 +1,15 @@
+// theme-toggle.js
 
-const toggle = document.getElementById("toggle-theme");
-const html = document.documentElement;
+// Theme toggle
+const themeBtn = document.getElementById('toggle-theme');
+themeBtn.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+});
 
-if (localStorage.getItem("theme") === "light") {
-  html.classList.remove("dark");
-} else {
-  html.classList.add("dark");
-}
+// Hamburger menu toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
-toggle.addEventListener("click", () => {
-  if (html.classList.contains("dark")) {
-    html.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  } else {
-    html.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  }
+menuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
 });

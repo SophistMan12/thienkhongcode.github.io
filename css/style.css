@@ -2,3 +2,15 @@
 body {
   transition: background 0.3s, color 0.3s;
 }
+#menu-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#toggle-theme:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+html {
+  scroll-behavior: smooth;
+}

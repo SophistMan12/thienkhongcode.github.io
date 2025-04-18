@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi" class="dark">
   <head>
@@ -11,24 +10,64 @@
         darkMode: 'class',
       }
     </script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
-    <header class="text-center py-10 bg-gray-100 dark:bg-gray-800">
-      <h1 class="text-4xl font-bold">ThienKhongCode</h1>
-      <p class="mt-2 text-xl italic">Không chỉ là viết code, mà còn viết ước mơ thành hiện thực</p>
-      <button id="toggle-theme" class="mt-4 px-4 py-2 rounded bg-gray-800 text-white dark:bg-gray-200 dark:text-black">
-        🌓 Đổi giao diện
-      </button>
+    <!-- HEADER -->
+    <header class="bg-gray-100 dark:bg-gray-800 sticky top-0 z-50 shadow">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <!-- Logo + Avatar + Slogan -->
+        <div class="flex items-center space-x-4">
+          <img src="/image/Avatar.jpg" alt="Avatar" class="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-600" />
+          <div>
+            <div class="text-2xl font-bold">ThienKhongCode</div>
+            <div class="text-sm italic text-gray-600 dark:text-gray-300 hidden md:block">
+              Không chỉ là viết code, mà còn viết ước mơ
+            </div>
+          </div>
+        </div>
+    
+        <!-- Hamburger icon -->
+        <button id="menu-btn" class="md:hidden text-2xl text-gray-700 dark:text-gray-200 focus:outline-none">
+          ☰
+        </button>
+    
+        <!-- Navigation + Toggle -->
+        <div id="menu" class="hidden md:flex md:items-center space-x-4">
+          <nav class="flex flex-col md:flex-row md:space-x-4 text-sm text-gray-700 dark:text-gray-200">
+            <a href="#about" class="hover:underline py-1">Giới thiệu</a>
+            <a href="#skills" class="hover:underline py-1">Kỹ năng</a>
+            <a href="#projects" class="hover:underline py-1">Dự án</a>
+            <a href="#contact" class="hover:underline py-1">Liên hệ</a>
+          </nav>
+          
+          <button id="toggle-theme" class="mt-2 md:mt-0 px-3 py-1 rounded bg-gray-800 text-white dark:bg-gray-200 dark:text-black">
+            🌓
+          </button>
+        </div>
+      </div>
+    
+      <!-- Mobile menu dropdown -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <nav class="flex flex-col text-sm text-gray-700 dark:text-gray-200 space-y-2">
+          <a href="#about" class="hover:underline">Giới thiệu</a>
+          <a href="#skills" class="hover:underline">Kỹ năng</a>
+          <a href="#projects" class="hover:underline">Dự án</a>
+          <a href="#contact" class="hover:underline">Liên hệ</a>
+        </nav>
+      </div>
     </header>
+    
 
+    <!-- MAIN CONTENT -->
     <main class="max-w-4xl mx-auto px-4 py-10">
-      <section class="mb-10">
+      <section id="about" class="mb-10">
         <h2 class="text-2xl font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 mb-4">Giới thiệu</h2>
-        <p>Tôi là Đặng Nguyễn Minh Thiện, sinh viên năm 4 ngành Khoa học máy tính tại Đại học Công nghiệp TP.HCM. Với tinh thần học hỏi không ngừng và niềm đam mê với công nghệ, tôi mong muốn phát triển sự nghiệp trong lĩnh vực phát triển phần mềm và trí tuệ nhân tạo.</p>
+        <p>Tôi là Đặng Nguyễn Minh Thiện, sinh viên năm 4 ngành Khoa học máy tính tại Đại học Công nghiệp TP.HCM...</p>
       </section>
-
-      <section class="mb-10">
+    
+      <section id="skills" class="mb-10">
         <h2 class="text-2xl font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 mb-4">Kỹ năng</h2>
         <ul class="list-disc ml-6">
           <li>Ngôn ngữ: Python, Java, JavaScript, C/C++</li>
@@ -38,8 +77,8 @@
           <li>AI/ML: Machine Learning, Deep Learning, NLP, Computer Vision</li>
         </ul>
       </section>
-
-      <section class="mb-10">
+    
+      <section id="projects" class="mb-10">
         <h2 class="text-2xl font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 mb-4">Dự án</h2>
         <div class="space-y-4">
           <div>
@@ -47,27 +86,19 @@
             <p>Phân tích yêu cầu, thiết kế UML và viết tài liệu SRS cho hệ thống quản lý đặt bàn.</p>
           </div>
           <div>
-            <h3 class="text-xl font-semibold">Ứng dụng quản lý sinh viên</h3>
-            <p>Ứng dụng Java kết nối cơ sở dữ liệu SQL, theo mô hình MVC.</p>
-          </div>
-          <div>
             <h3 class="text-xl font-semibold">Nhận dạng hình ảnh với CNN</h3>
             <p>Mô hình phân loại chó, mèo, ngựa bằng Keras, sử dụng kỹ thuật Augmentation và Normalization.</p>
           </div>
         </div>
       </section>
-
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 mb-4">CV</h2>
-        <p>Bạn có thể <a href="#" class="text-blue-600 dark:text-blue-400 underline">xem hoặc tải CV tại đây</a>.</p>
-      </section>
-
-      <section>
+    
+      <section id="contact">
         <h2 class="text-2xl font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 mb-4">Liên hệ</h2>
-        <p>Email: <a href="mailto:your.email@example.com" class="text-blue-600 dark:text-blue-400">your.email@example.com</a></p>
-        <p>LinkedIn | GitHub | [Thêm khi có]</p>
+        <p>Email: <a href="mailto:your.email@example.com" class="text-blue-600 dark:text-blue-400">thienlenin12@gmail.com</a></p>
+        <p>LinkedIn | https://github.com/SophistMan12</p>
       </section>
     </main>
+    
 
     <footer class="text-center py-6 text-gray-500 text-sm">
       &copy; 2025 ThienKhongCode. All rights reserved.
