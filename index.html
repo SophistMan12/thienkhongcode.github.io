@@ -1,109 +1,120 @@
 <!DOCTYPE html>
 <html lang="vi" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ThienKhongCode | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-      }
-    </script>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
-    <!-- HEADER -->
-    <header class="bg-gray-100 dark:bg-gray-800 sticky top-0 z-50 shadow">
-      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <!-- Logo + Avatar + Slogan -->
-        <div class="flex items-center space-x-4">
-          <img src="/image/Avatar.jpg" alt="Avatar" class="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-600" />
-          <div>
-            <div class="text-2xl font-bold">ThienKhongCode</div>
-            <div class="text-sm italic text-gray-600 dark:text-gray-300 hidden md:block">
-              Không chỉ là viết code, mà còn viết ước mơ
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThienKhongCode | Portfolio</title>
+  <script src="js/theme-init.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
+  <!-- HEADER -->
+  <header>
+    <div id="header-container"></div>
+  </header>
+  <!-- MAIN CONTENT -->
+  <main class="text-gray-900 dark:text-gray-200">
+    <!-- Giới thiệu -->
+    <section id="about"
+      class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-20 bg-white dark:bg-[#1f1f1f]">
+      <!-- Ảnh tạo dáng -->
+      <div
+        class="w-full md:w-1/3 max-w-sm rounded-2xl overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700">
+        <img src="image/AnhGioiThieu.jpg" alt="Ảnh cá nhân"
+          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110">
+      </div>
+
+      <!-- Nội dung giới thiệu -->
+      <div class="text-center md:text-left max-w-xl">
+        <h2 class="text-4xl font-bold mb-4 border-b-4 border-blue-500 inline-block pb-1">Giới thiệu</h2>
+        <p class="text-lg leading-relaxed mt-4">
+          Xin chào! Mình là <strong>Đặng Nguyễn Minh Thiện</strong>, sinh viên năm 4 ngành Khoa học máy tính tại Đại học
+          Công nghiệp TP.HCM. Mình đam mê lập trình, thích khám phá trí tuệ nhân tạo và đang trên hành trình trở thành
+          một lập trình viên toàn diện.
+        </p>
+      </div>
+    </section>
+
+
+
+    <!-- Kỹ năng -->
+    <section id="skills"
+      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-gray-50 dark:bg-gray-800">
+      <h2 class="text-4xl font-bold mb-4 border-b-4 border-green-500 pb-2">Kỹ năng</h2>
+      <ul class="list-disc ml-6 space-y-2 text-lg">
+        <li><strong>Ngôn ngữ:</strong> Python, Java, JavaScript, C/C++</li>
+        <li><strong>Web:</strong> HTML, CSS, JS, .NET, Java</li>
+        <li><strong>Dữ liệu:</strong> SQL, MongoDB</li>
+        <li><strong>Công cụ:</strong> Git, VS Code, Jupyter, Matlab</li>
+        <li><strong>AI/ML:</strong> Machine Learning, Deep Learning, NLP, Computer Vision</li>
+      </ul>
+    </section>
+
+    <!-- Dự án -->
+    <section id="projects"
+      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-white dark:bg-[#1f1f1f]">
+      <h2 class="text-4xl font-bold mb-4 border-b-4 border-purple-500 pb-2">Dự án</h2>
+      <div class="space-y-6 text-lg">
+        <div>
+          <a href="project-restaurant.html" class="text-2xl font-semibold hover:underline">📌 Hệ thống đặt bàn nhà hàng</a>
+          <p>Phân tích yêu cầu, thiết kế UML và viết tài liệu SRS cho hệ thống quản lý đặt bàn.</p>
+          <a href="https://github.com/bang12bang007/QuanLiDatBanNhaHang" target="_blank" class="text-blue-600 dark:text-blue-400 underline">Xem chi tiết trên GitHub</a>
         </div>
-    
-        <!-- Hamburger icon -->
-        <button id="menu-btn" class="md:hidden text-2xl text-gray-700 dark:text-gray-200 focus:outline-none">
-          ☰
-        </button>
-    
-        <!-- Navigation + Toggle -->
-        <div id="menu" class="hidden md:flex md:items-center space-x-4">
-          <nav class="flex flex-col md:flex-row md:space-x-4 text-sm text-gray-700 dark:text-gray-200">
-            <a href="#about" class="hover:underline py-1">Giới thiệu</a>
-            <a href="#skills" class="hover:underline py-1">Kỹ năng</a>
-            <a href="#projects" class="hover:underline py-1">Dự án</a>
-            <a href="#contact" class="hover:underline py-1">Liên hệ</a>
-          </nav>
-          
-          <button id="toggle-theme" class="mt-2 md:mt-0 px-3 py-1 rounded bg-gray-800 text-white dark:bg-gray-200 dark:text-black">
-            🌓
-          </button>
+        
+        <div>
+          <h3 class="text-2xl font-semibold">🧠 Nhận dạng hình ảnh với CNN</h3>
+          <p>Mô hình phân loại chó, mèo, ngựa bằng Keras, sử dụng Augmentation và Normalization để cải thiện độ chính
+            xác.</p>
         </div>
       </div>
-    
-      <!-- Mobile menu dropdown -->
-      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-        <nav class="flex flex-col text-sm text-gray-700 dark:text-gray-200 space-y-2">
-          <a href="#about" class="hover:underline">Giới thiệu</a>
-          <a href="#skills" class="hover:underline">Kỹ năng</a>
-          <a href="#projects" class="hover:underline">Dự án</a>
-          <a href="#contact" class="hover:underline">Liên hệ</a>
-        </nav>
-      </div>
-    </header>
-    
+    </section>
 
-    <!-- MAIN CONTENT -->
-    <main class="max-w-4xl mx-auto px-4 py-10">
-      <section id="about" class="mb-10">
-        <h2 class="text-2xl font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 mb-4">Giới thiệu</h2>
-        <p>Tôi là Đặng Nguyễn Minh Thiện, sinh viên năm 4 ngành Khoa học máy tính tại Đại học Công nghiệp TP.HCM...</p>
-      </section>
-    
-      <section id="skills" class="mb-10">
-        <h2 class="text-2xl font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 mb-4">Kỹ năng</h2>
-        <ul class="list-disc ml-6">
-          <li>Ngôn ngữ: Python, Java, JavaScript, C/C++</li>
-          <li>Web Development: HTML, CSS, JS, .NET, Java</li>
-          <li>Cơ sở dữ liệu: SQL, MongoDB</li>
-          <li>Công nghệ: Git, VS Code, Jupyter, Matlab</li>
-          <li>AI/ML: Machine Learning, Deep Learning, NLP, Computer Vision</li>
-        </ul>
-      </section>
-    
-      <section id="projects" class="mb-10">
-        <h2 class="text-2xl font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 mb-4">Dự án</h2>
-        <div class="space-y-4">
-          <div>
-            <h3 class="text-xl font-semibold">Hệ thống đặt bàn nhà hàng</h3>
-            <p>Phân tích yêu cầu, thiết kế UML và viết tài liệu SRS cho hệ thống quản lý đặt bàn.</p>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold">Nhận dạng hình ảnh với CNN</h3>
-            <p>Mô hình phân loại chó, mèo, ngựa bằng Keras, sử dụng kỹ thuật Augmentation và Normalization.</p>
-          </div>
-        </div>
-      </section>
-    
-      <section id="contact">
-        <h2 class="text-2xl font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 mb-4">Liên hệ</h2>
-        <p>Email: <a href="mailto:your.email@example.com" class="text-blue-600 dark:text-blue-400">thienlenin12@gmail.com</a></p>
-        <p>LinkedIn | https://github.com/SophistMan12</p>
-      </section>
-    </main>
-    
+    <!-- CV -->
+    <section class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-gray-50 dark:bg-gray-800">
+      <h2 class="text-4xl font-bold mb-4 border-b-4 border-yellow-500 pb-2">CV</h2>
+      <p class="text-lg">
+        Bạn có thể <a href="assets/ENG_CV_DANGNGUYENMINHTHIEN.pdf" target="_blank"
+          class="text-blue-600 dark:text-blue-400 underline font-semibold">xem hoặc tải CV tại đây</a>.
+      </p>
+    </section>
 
-    <footer class="text-center py-6 text-gray-500 text-sm">
-      &copy; 2025 ThienKhongCode. All rights reserved.
-    </footer>
 
-    <script src="js/theme-toggle.js"></script>
-  </body>
+    <!-- Liên hệ -->
+    <section id="contact"
+      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-white dark:bg-[#1f1f1f]">
+      <h2 class="text-4xl font-bold mb-4 border-b-4 border-pink-500 pb-2">Liên hệ</h2>
+      <p class="text-lg">📧 Email: <a href="mailto:thienlenin12@gmail.com"
+          class="text-blue-600 dark:text-blue-400 underline">thienlenin12@gmail.com</a></p>
+      <p class="text-lg mt-2">🔗 GitHub: <a href="https://github.com/SophistMan12" target="_blank"
+          class="text-blue-600 dark:text-blue-400 underline">github.com/SophistMan12</a></p>
+    </section>
+  </main>
+
+
+
+  <footer class="text-center py-6 text-gray-500 text-sm">
+    &copy; 2025 ThienKhongCode. All rights reserved.
+  </footer>
+
+  <script src="js/layout.js"></script>
+
+  <script src="js/theme-toggle.js"></script>
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
 </html>

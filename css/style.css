@@ -1,16 +1,54 @@
+/* Reset toàn bộ các thuộc tính mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Cài đặt font chữ và màu sắc mặc định cho body */
 body {
-  transition: background 0.3s, color 0.3s;
-}
-#menu-btn:hover {
-  opacity: 0.8;
-  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#toggle-theme:hover {
-  opacity: 0.9;
-  cursor: pointer;
-}
+/* Tạo hiệu ứng cuộn mượt mà */
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Áp dụng cho header sticky */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;  /* Hoặc màu phù hợp */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Thêm bóng đổ để nổi bật */
+}
+
+/* Nội dung chính tránh bị che khuất bởi header sticky */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark mode transition */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
