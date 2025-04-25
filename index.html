@@ -16,7 +16,7 @@
       darkMode: 'class',
     }
   </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
@@ -36,7 +36,10 @@
 
     <!-- About Section -->
     <section id="about"
-      class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-16 px-8 md:px-24 bg-white dark:bg-[#1f1f1f]">
+      class="relative min-h-screen flex flex-col md:flex-row items-center justify-center gap-16 px-8 md:px-24 text-white">
+      <!-- Particles Background -->
+      <div id="particles-js" class="absolute inset-0 -z-10"></div>
+
       <!-- Profile Image -->
       <div
         class="w-full md:w-1/2 max-w-lg rounded-2xl overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700">
@@ -55,9 +58,9 @@
       </div>
     </section>
 
-    <!-- About Content -->
+    <!-- Skills Section -->
     <section id="skills"
-      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-gray-50 dark:bg-gray-800">
+      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 ">
       <h2 class="text-4xl font-bold mb-4 border-b-4 border-green-500 pb-2" data-aos="fade-up">Kỹ năng</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Skill 1 -->
@@ -148,9 +151,10 @@
     </section>
 
     <!-- Projects Section -->
-
     <section id="projects"
-      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-white dark:bg-[#1f1f1f]">
+      class="relative min-h-screen flex flex-row md:flex-col items-center justify-center  px-8 md:px-24 text-white">
+      <!-- Particles Background -->
+      <div id="particles-js" class="absolute inset-0 -z-10"></div>
       <h2 class="text-4xl font-bold mb-6 border-b-4 border-purple-500 pb-2" data-aos="fade-up">Dự án</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project 1 -->
@@ -210,7 +214,6 @@
             </div>
           </div>
         </div>
-
         <!-- Project 3 -->
         <div class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up"
           data-aos-delay="200">
@@ -242,18 +245,22 @@
     </section>
 
     <section id="blog"
-      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-gray-50 dark:bg-gray-800">
+      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 ">
       <h2 class="text-4xl font-bold mb-6 border-b-4 border-yellow-500 pb-2" data-aos="fade-up">Blog</h2>
-      <article class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg p-8" data-aos="fade-up">
-        <h3 class="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">ThienKhongCode – Nhưng Lại Thành Lập Trình
+      <article class="rounded-lg shadow-lg p-8" data-aos="fade-up">
+        <h3 class="text-3xl font-bold mb-4 text-blue-600 dark:text-blue-400">ThienKhongCode – Nhưng Lại Thành Lập
+          Trình
           Viên</h3>
         <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-          Là một người từng nghĩ mình sẽ làm công việc tài chính, tôi không ngờ rằng con đường của mình lại dẫn đến lập
+          Là một người từng nghĩ mình sẽ làm công việc tài chính, tôi không ngờ rằng con đường của mình lại dẫn đến
+          lập
           trình.
         </p>
         <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-          Tôi từng là học sinh lớp chọn khối A, giỏi Toán và Lý. Với đam mê con số, tôi luôn nghĩ tương lai mình sẽ gắn
-          liền với tài chính – kiểm toán hay phân tích tài chính, những ngành nghe có vẻ ổn định và đầy tiềm năng. Nhưng
+          Tôi từng là học sinh lớp chọn khối A, giỏi Toán và Lý. Với đam mê con số, tôi luôn nghĩ tương lai mình sẽ
+          gắn
+          liền với tài chính – kiểm toán hay phân tích tài chính, những ngành nghe có vẻ ổn định và đầy tiềm năng.
+          Nhưng
           tất cả thay đổi khi tôi vô tình biết được những điều kỳ diệu chỉ có thể xuất hiện khi kỉ nguyên 4.0 bắt đầu.
           Những dòng code đơn giản,
           logic và những thuật toán phức tạp đã khiến mọi thứ trở nên sống động hơn bao giờ hết. Tôi đã bị cuốn hút
@@ -265,7 +272,7 @@
           ngờ nhất sẽ dẫn bạn đến những hành trình tuyệt vời nhất.
         </p>
         <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-          <strong>ThienKhongCode</strong> – Không chỉ là viết code, mà còn viết ước mơ. Vì lập trình không chỉ là công
+          <strong>ThienKhongCode</strong> – Không chỉ viết code, còn viết ước mơ. Vì lập trình không chỉ là công
           việc, mà là cách tôi hiện thực hóa những ý tưởng, những ước mơ mình chưa bao giờ dám nghĩ đến.
         </p>
       </article>
@@ -275,9 +282,9 @@
       </blockquote>
     </section>
 
-
     <section id="contact"
-      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-white dark:bg-[#1f1f1f]">
+      class="relative min-h-screen flex flex-col items-start justify-center px-8 md:px-24 ">
+      <div id="particles-js" class="absolute inset-0 -z-10"></div>
       <h2 class="text-4xl font-bold mb-4 border-b-4 border-pink-500 pb-2">Liên hệ</h2>
       <p class="text-lg">📧 Email: <a href="mailto:thienlenin12@gmail.com"
           class="text-blue-600 dark:text-blue-400 underline">thienlenin12@gmail.com</a></p>
@@ -285,13 +292,17 @@
           class="text-blue-600 dark:text-blue-400 underline">github.com/SophistMan12</a></p>
       <p class="text-lg mt-2">📱 Zalo: <a href="https://zalo.me/0908170045" target="_blank"
           class="text-blue-600 dark:text-blue-400 underline">zalo.me/0908170045(Đặng Nguyễn Minh Thiện)</a></p>
-     
-        </section>
+
+    </section>
+    <button id="scroll-to-top" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <!-- FOOTER -->
-    <footer id="footer" class="text-center py-6 text-gray-500 text-sm bg-gray-100 dark:bg-gray-800">
+    <footer id="footer" class="text-center py-6 text-gray-500 text-sm bg-gray-900 ">
       <div class="container mx-auto px-6">
         <p class="mb-4">📧 Email:
-          <a href="mailto:thienlenin12@gmail.com" class="text-blue-600 dark:text-blue-400 underline">
+          <a href="mailto:thienlenin12@gmail.com?subject=Liên hệ từ website"
+            class="text-blue-600 dark:text-blue-400 underline">
             thienlenin12@gmail.com
           </a>
         </p>
@@ -318,7 +329,72 @@
     <script>
       AOS.init();
     </script>
-
+    <script>
+      tsParticles.load("particles-js", {
+        particles: {
+          number: {
+            value: 100, // Số lượng hạt
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: "#ffffff" // Màu của hạt
+          },
+          shape: {
+            type: "circle" // Hình dạng hạt (circle, edge, triangle, polygon, star, etc.)
+          },
+          opacity: {
+            value: 0.5,
+            random: true
+          },
+          size: {
+            value: 5,
+            random: true
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false
+          }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse" // Hiệu ứng khi hover (grab, bubble, repulse)
+            },
+            onclick: {
+              enable: true,
+              mode: "push" // Hiệu ứng khi click (push, remove, bubble, repulse)
+            }
+          },
+          modes: {
+            repulse: {
+              distance: 100,
+              duration: 0.4
+            },
+            push: {
+              particles_nb: 4
+            }
+          }
+        },
+        retina_detect: true
+      });
+    </script>
 </body>
 
 </html>
