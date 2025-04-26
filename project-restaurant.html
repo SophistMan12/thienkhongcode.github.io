@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project | Restaurant Table Management</title>
 
-  <!-- Theme Initialization -->
-  <script src="js/theme-init.js"></script>
-
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -39,9 +37,11 @@
   <!-- MAIN CONTENT -->
   <main class="text-gray-900 dark:text-gray-200">
 
+    <div id="particles-js" class="absolute inset-0 -z-10"></div>
+
     <!-- Overview Section -->
     <section id="overview"
-      class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-20 bg-white dark:bg-[#1f1f1f]">
+      class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-20 -mt-5">
       <!-- Introduction Content -->
       <div class="text-center md:text-left max-w-xl">
         <h2 class="text-4xl font-bold mb-4 border-b-4 border-blue-500 inline-block pb-1">Giới thiệu tổng quan về dự án
@@ -71,8 +71,7 @@
     </section>
 
     <!-- Team Section -->
-    <section id="team"
-      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-gray-50 dark:bg-gray-800">
+    <section id="team" class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20  ">
       <div class="w-full h-[33vh] rounded-2xl overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700">
         <img src="image/AnhNhomDH.jpg" alt="Ảnh background dự án"
           class="w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110">
@@ -91,8 +90,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features"
-      class="min-h-screen flex flex-col justify-start items-start px-6 md:px-20 pt-10 bg-white dark:bg-[#1f1f1f]">
+    <section id="features" class="min-h-screen flex flex-col justify-start items-start px-6 md:px-20 pt-10">
       <h2 class="text-4xl font-bold mb-4 border-b-4 border-red-500 pb-2">Một số chức năng nổi bật</h2>
 
       <!-- Swiper Container -->
@@ -100,7 +98,7 @@
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div class="w-full h-[250px] md:h-[400px] rounded-xl overflow-hidden shadow-lg relative">
+            <div class="w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-lg relative">
               <img src="image/AnhChucNang1.jpg" alt="Chức năng 1" class="w-full h-full object-cover">
               <p
                 class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm md:text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
@@ -110,7 +108,7 @@
           </div>
           <!-- Slide 2 -->
           <div class="swiper-slide">
-            <div class="w-full h-[250px] md:h-[400px] rounded-xl overflow-hidden shadow-lg relative">
+            <div class="w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-lg relative">
               <img src="image/AnhChucNang2.jpg" alt="Chức năng 2" class="w-full h-full object-cover">
               <p
                 class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm md:text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
@@ -120,7 +118,7 @@
           </div>
           <!-- Slide 3 -->
           <div class="swiper-slide">
-            <div class="w-full h-[250px] md:h-[400px] rounded-xl overflow-hidden shadow-lg relative">
+            <div class="w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-lg relative">
               <img src="image/AnhChucNang3.jpg" alt="Chức năng 3" class="w-full h-full object-cover">
               <p
                 class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm md:text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
@@ -130,7 +128,7 @@
           </div>
           <!-- Slide 4 -->
           <div class="swiper-slide">
-            <div class="w-full h-[250px] md:h-[400px] rounded-xl overflow-hidden shadow-lg relative">
+            <div class="w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-lg relative">
               <img src="image/AnhChucNang4.jpg" alt="Chức năng 4" class="w-full h-full object-cover">
               <p
                 class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm md:text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
@@ -145,7 +143,7 @@
     </section>
 
     <!-- Challenges, Advantages, and Results Section -->
-    <section id="challenges-results" class="min-h-screen px-6 md:px-20 py-10 bg-gray-50 dark:bg-gray-800">
+    <section id="challenges-results" class="min-h-screen px-6 md:px-20 py-10">
       <h2 class="text-4xl font-bold mb-6 border-b-4 border-yellow-500 pb-2">Khó khăn, Thuận lợi và Kết quả</h2>
 
       <!-- Challenges -->
@@ -179,23 +177,24 @@
       </div>
     </section>
 
-    <!-- Technology Section -->
+    <!-- Technology Floating Box -->
     <section id="technology"
-      class="w-full md:w-auto bg-gray-300 text-gray-800 dark:bg-gray-800 dark:text-gray-200 p-4 rounded-lg shadow-lg z-50 fixed bottom-4 left-4 md:relative md:bottom-auto md:left-auto">
-      <h2 class="text-lg md:text-xl font-bold mb-2">🛠️ Công nghệ sử dụng</h2>
-      <ul class="space-y-1 md:space-y-2 text-xs md:text-sm list-disc list-inside">
-        <li><strong>Ngôn ngữ lập trình:</strong> Java</li>
-        <li><strong>Công cụ quản lý dự án:</strong> Maven</li>
-        <li><strong>Môi trường phát triển:</strong> NetBeans IDE</li>
-        <li><strong>Cấu trúc dự án:</strong> Chuẩn Maven</li>
-        <li><strong>Kiến trúc phần mềm:</strong> Phân lớp rõ ràng</li>
-        <li><strong>Giao diện người dùng:</strong> Java Swing</li>
+      class="fixed bottom-4 right-4 bg-gray-800/50 backdrop-blur-md text-gray-800 dark:text-gray-200 p-4 rounded-xl shadow-2xl border border-gray-300 dark:border-gray-700 w-64 text-xs md:text-sm z-50">
+      <h2 class="text-base md:text-lg font-bold mb-2">🛠️ Công nghệ sử dụng</h2>
+      <ul class="space-y-1 list-disc list-inside">
+        <li><strong>Ngôn ngữ:</strong> Java</li>
+        <li><strong>Quản lý dự án:</strong> Maven</li>
+        <li><strong>IDE:</strong> NetBeans</li>
+        <li><strong>Cấu trúc:</strong> Chuẩn Maven</li>
+        <li><strong>Kiến trúc:</strong> Phân lớp rõ ràng</li>
+        <li><strong>Giao diện:</strong> Java Swing</li>
       </ul>
     </section>
+
   </main>
 
   <!-- FOOTER -->
-  <footer id="footer" class="text-center py-6 text-gray-500 text-sm bg-gray-100 dark:bg-[#1f1f1f]">
+  <footer id="footer" class="text-center py-6 text-gray-500 text-sm bg-[#1f1f1f]">
     <div class="container mx-auto px-6">
       <p class="mb-4">📧 Email:
         <a href="mailto:thienlenin12@gmail.com" class="text-blue-600 dark:text-blue-400 underline">
@@ -214,7 +213,6 @@
       <p>&copy; 2025 ThienKhongCode. All rights reserved.</p>
     </div>
   </footer>
-
   <!-- Back to Top Button -->
   <button id="back-to-top" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
     <i class="fas fa-arrow-up"></i>
@@ -243,6 +241,72 @@
         top: 0,
         behavior: 'smooth'
       });
+    });
+  </script>
+  <script>
+    tsParticles.load("particles-js", {
+      particles: {
+        number: {
+          value: 100, // Số lượng hạt
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#ffffff" // Màu của hạt
+        },
+        shape: {
+          type: "circle" // Hình dạng hạt (circle, edge, triangle, polygon, star, etc.)
+        },
+        opacity: {
+          value: 0.5,
+          random: true
+        },
+        size: {
+          value: 5,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse" // Hiệu ứng khi hover (grab, bubble, repulse)
+          },
+          onclick: {
+            enable: true,
+            mode: "push" // Hiệu ứng khi click (push, remove, bubble, repulse)
+          }
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          }
+        }
+      },
+      retina_detect: true
     });
   </script>
 </body>

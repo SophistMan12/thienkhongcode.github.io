@@ -1,40 +1,36 @@
-<header class="bg-gray-900 sticky top-0 z-50 shadow">  
-  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+<header class="bg-[#1f1f1f] sticky top-0 z-50 shadow">
+  <div class="max-w-6xl mx-auto px-4 flex items-center justify-between py-4">
+
+    <!-- Logo bên trái -->
     <div class="flex items-center space-x-4">
-      <img src="/image/Avatar.jpg" alt="Avatar"
-        class="w-12 h-12 rounded-full border border-gray-600" />
+      <img src="/image/Avatar.jpg" alt="Avatar" class="w-12 h-12 rounded-full border border-gray-600" />
       <div>
-        <div class="text-2xl font-bold text-white"><a href="index.html">ThienKhongCode</a></div>
+        <div class="text-2xl font-bold text-white">
+          <a href="index.html">ThienKhongCode</a>
+        </div>
         <div class="text-sm italic text-gray-400 hidden md:block">
           Không chỉ viết code, còn viết ước mơ
         </div>
       </div>
     </div>
 
-    <!-- Hamburger icon -->
-    <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
-      ☰
-    </button>
+    <!-- Menu + Đường line -->
+    <div class="flex items-center flex-1 ml-8">
+      <!-- Đường kẻ bên trái -->
+      <div class="flex-1 h-0.5 bg-white"></div>
 
-    <div id="menu" class="hidden md:flex md:items-center space-x-4">
-      <nav class="flex flex-col md:flex-row md:space-x-4 text-sm text-gray-300">
-        <a href="index.html#about" class="hover:underline py-1">Giới thiệu</a>
-        <a href="index.html#skills" class="hover:underline py-1">Kỹ năng</a>
-        <a href="index.html#projects" class="hover:underline py-1">Dự án</a>
-        <a href="index.html#blog" class="hover:underline py-1">Blog</a>
-        <a href="index.html#contact" class="hover:underline py-1">Liên hệ</a>
+      <!-- Menu chữ -->
+      <nav class="flex space-x-6 px-6 text-sm text-gray-300 font-medium">
+        <a href="index.html#about" class="hover:text-white transition">Giới thiệu</a>
+        <a href="index.html#skills" class="hover:text-white transition">Kỹ năng</a>
+        <a href="index.html#projects" class="hover:text-white transition">Dự án</a>
+        <a href="index.html#blog" class="hover:text-white transition">Blog</a>
+        <a href="index.html#contact" class="hover:text-white transition">Liên hệ</a>
       </nav>
-    </div>
-  </div>
 
-  <!-- Mobile menu dropdown -->
-  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-    <nav class="flex flex-col text-sm text-gray-300 space-y-2">
-      <a href="index.html#about" class="hover:underline py-1">Giới thiệu</a>
-      <a href="index.html#skills" class="hover:underline py-1">Kỹ năng</a>
-      <a href="index.html#projects" class="hover:underline py-1">Dự án</a>
-      <a href="index.html#blog" class="hover:underline py-1">Blog</a>
-      <a href="index.html#contact" class="hover:underline py-1">Liên hệ</a>
-    </nav>
+      <!-- Đường kẻ bên phải -->
+      <div class="flex-1 h-0.5 bg-white"></div>
+    </div>
+
   </div>
 </header>
