@@ -19,6 +19,12 @@
 
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
@@ -137,23 +143,24 @@
       </div>
 
       <!-- CV Section -->
-      <div class="mt-12">
+      <div class="mt-12" data-aos="fade-up">
         <h3 class="text-4xl font-bold mb-6 border-b-4 border-yellow-500 pb-2">📄 CV</h3>
         <div class="flex flex-col md:flex-row items-center gap-6">
           <!-- CV Tiếng Anh -->
           <a href="assets/ENG_CV_DANGNGUYENMINHTHIEN.pdf" target="_blank"
-            class="flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+            class="flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-110 hover:rotate-1">
             <i class="fas fa-file-pdf text-2xl mr-3"></i>
             <span class="text-lg font-semibold">Tải CV Tiếng Anh</span>
           </a>
           <!-- CV Tiếng Việt -->
-          <a href="assets/VIE_CV_DANGNGUYENMINHTHIEN.pdf" target="_blank"
-            class="flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-105">
+          <a href="assets/CV_DANGNGUYENMINHTHIEN.pdf" target="_blank"
+            class="flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-110 hover:-rotate-1">
             <i class="fas fa-file-pdf text-2xl mr-3"></i>
             <span class="text-lg font-semibold">Tải CV Tiếng Việt</span>
           </a>
         </div>
       </div>
+    </section>
 
       <!-- Projects Section -->
       <section id="projects"
@@ -322,7 +329,7 @@
         </a>
       <p>&copy; 2025 ThienKhongCode. All rights reserved.</p>
     </div>
-  </footer> 
+  </footer>
 
   <!-- Back to Top Button -->
   <button id="back-to-top" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
