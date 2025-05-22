@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project |VIDEO GESTURE CONTROL</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
+
+  <!-- HEADER -->
+  <header>
+    <div id="header-container"></div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="text-gray-900 dark:text-gray-200">
+
+    <div id="particles-js" class="absolute inset-0 -z-10"></div>
+
+    <!-- Overview Section -->
+    <section id="overview"
+      class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-20 py-10">
+      <!-- Background Image -->
+      <div
+        class="w-full md:w-1/2 max-w-md rounded-2xl overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700 mb-8 md:mb-0 h-[27rem] flex items-center">
+        <img src="image/AnhPhatVideo.jpg" alt="Điều khiển video bằng cử chỉ tay"
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110">
+      </div>
+      <!-- Introduction Content -->
+      <div class="text-center md:text-left max-w-xl flex flex-col justify-center">
+        <h2 class="text-4xl font-bold mb-4 border-b-4 border-blue-500 inline-block pb-1">
+          Điều khiển trình phát video bằng cử chỉ tay
+        </h2>
+        <p class="text-lg leading-relaxed mt-4">
+          Dự án ứng dụng <span class="font-semibold text-blue-600">AI</span> và <span
+            class="font-semibold text-green-600">Computer Vision</span> để nhận diện cử chỉ tay, cho phép người dùng
+          điều khiển trình phát video (phát, dừng, tua, tăng giảm âm lượng, v.v.) một cách tự nhiên mà không cần chạm
+          vào thiết bị.
+        </p>
+        <p class="text-lg mt-4">
+          Hệ thống sử dụng <span class="font-semibold">OpenCV</span> và <span class="font-semibold">Mediapipe</span> để
+          phát hiện và phân tích cử chỉ, mang lại trải nghiệm tương tác hiện đại, phù hợp cho các ứng dụng giải trí,
+          giáo dục hoặc trình chiếu không chạm.
+        </p>
+        <p class="text-lg font-semibold mt-4 text-green-500">
+          Tình trạng: Đã hoàn thành 100% .
+        </p>
+        <p class="text-lg mt-4">
+          🔗 GitHub: <a href="https://github.com/SophistMan12/Video-Gesture-Control.git" target="_blank"
+            class="text-blue-600 dark:text-blue-400 underline">github.com/SophistMan12/video-gesture-control</a>
+        </p>
+      </div>
+    </section>
+    <!-- Technology Floating Box -->
+    <section id="technology"
+      class="fixed bottom-4 right-4 bg-gray-900/80 backdrop-blur-md text-gray-100 p-5 rounded-xl shadow-2xl border border-gray-700 w-72 text-sm z-50">
+      <h2 class="text-lg font-bold mb-3 flex items-center gap-2">
+        <i class="fas fa-tools text-yellow-400"></i> Công nghệ sử dụng
+      </h2>
+      <ul class="space-y-2">
+        <li>
+          <span class="font-semibold text-blue-400"><i class="fas fa-code mr-2"></i>Ngôn ngữ:</span>
+          <span class="text-gray-200">Python</span>
+        </li>
+        <li>
+          <span class="font-semibold text-green-400"><i class="fas fa-brain mr-2"></i>AI/Computer Vision:</span>
+          <span class="text-gray-200">OpenCV, Mediapipe</span>
+        </li>
+        <li>
+          <span class="font-semibold text-pink-400"><i class="fas fa-laptop-code mr-2"></i>IDE:</span>
+          <span class="text-gray-200">VS Code, Jupyter Notebook</span>
+        </li>
+        <li>
+          <span class="font-semibold text-yellow-300"><i class="fas fa-layer-group mr-2"></i>Kiến trúc:</span>
+          <span class="text-gray-200">Modular, dễ mở rộng</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="text-center py-6 text-gray-500 text-sm bg-[#1f1f1f]">
+    <div class="container mx-auto px-6">
+      <p class="mb-4">📧 Email:
+        <a href="mailto:thienlenin12@gmail.com" class="text-blue-600 dark:text-blue-400 underline">
+          thienlenin12@gmail.com
+        </a>
+      </p>
+      <p class="mb-4">🔗 GitHub:
+        <a href="https://github.com/SophistMan12" target="_blank" class="text-blue-600 dark:text-blue-400 underline">
+          github.com/SophistMan12
+        </a>
+      </p>
+      <p class="mb-4">📱 Zalo:
+        <a href="https://zalo.me/0908170045" target="_blank" class="text-blue-600 dark:text-blue-400 underline">
+          zalo.me/0908170045(Đặng Nguyễn Minh Thiện)
+        </a>
+      <p>&copy; 2025 ThienKhongCode. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/theme-toggle.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Back to Top Button Logic
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.remove('hidden');
+      } else {
+        backToTopButton.classList.add('hidden');
+      }
+    });
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+  <script>
+    tsParticles.load("particles-js", {
+      particles: {
+        number: {
+          value: 100, // Số lượng hạt
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#ffffff" // Màu của hạt
+        },
+        shape: {
+          type: "circle" // Hình dạng hạt (circle, edge, triangle, polygon, star, etc.)
+        },
+        opacity: {
+          value: 0.5,
+          random: true
+        },
+        size: {
+          value: 5,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse" // Hiệu ứng khi hover (grab, bubble, repulse)
+          },
+          onclick: {
+            enable: true,
+            mode: "push" // Hiệu ứng khi click (push, remove, bubble, repulse)
+          }
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+
+</html>
