@@ -65,7 +65,7 @@
           giáo dục hoặc trình chiếu không chạm.
         </p>
         <p class="text-lg font-semibold mt-4 text-green-500">
-          Tình trạng: Đã hoàn thành 100% .
+          Tình trạng: Đã hoàn thành 100%. Vẫn đang tiếp tục cải tiến và mở rộng tính năng.
         </p>
         <p class="text-lg mt-4">
           🔗 GitHub: <a href="https://github.com/SophistMan12/Video-Gesture-Control.git" target="_blank"
@@ -73,33 +73,154 @@
         </p>
       </div>
     </section>
-    <!-- Technology Floating Box -->
-    <section id="technology"
-      class="fixed bottom-4 right-4 bg-gray-900/80 backdrop-blur-md text-gray-100 p-5 rounded-xl shadow-2xl border border-gray-700 w-72 text-sm z-50">
-      <h2 class="text-lg font-bold mb-3 flex items-center gap-2">
-        <i class="fas fa-tools text-yellow-400"></i> Công nghệ sử dụng
-      </h2>
-      <ul class="space-y-2">
-        <li>
-          <span class="font-semibold text-blue-400"><i class="fas fa-code mr-2"></i>Ngôn ngữ:</span>
-          <span class="text-gray-200">Python</span>
-        </li>
-        <li>
-          <span class="font-semibold text-green-400"><i class="fas fa-brain mr-2"></i>AI/Computer Vision:</span>
-          <span class="text-gray-200">OpenCV, Mediapipe</span>
-        </li>
-        <li>
-          <span class="font-semibold text-pink-400"><i class="fas fa-laptop-code mr-2"></i>IDE:</span>
-          <span class="text-gray-200">VS Code, Jupyter Notebook</span>
-        </li>
-        <li>
-          <span class="font-semibold text-yellow-300"><i class="fas fa-layer-group mr-2"></i>Kiến trúc:</span>
-          <span class="text-gray-200">Modular, dễ mở rộng</span>
-        </li>
+    <!-- Data & Deep Learning Section -->
+    <section id="data-dnn" class="min-h-[40vh] flex flex-col justify-start items-start px-6 md:px-20 py-10">
+      <h2 class="text-4xl font-bold mb-4 border-b-4 border-pink-500 pb-2">Dữ liệu & Xây dựng mô hình DNN</h2>
+
+      <div class="mb-6">
+        <h3 class="text-2xl font-semibold mb-2 text-blue-600">1. Thu thập & chuẩn bị dữ liệu</h3>
+        <ul class="list-disc ml-6 space-y-2 text-lg">
+          <li>
+            <span class="font-semibold">Nguồn dữ liệu:</span> Tự thu thập bằng webcam sử dụng thư viện OpenCV, trích
+            xuất 42 tọa độ (x, y) của 21 điểm bàn tay từ MediaPipe Hands. Gồm 4 lớp cử chỉ: <code>OK</code>,
+            <code>L</code>, <code>Palm</code>, <code>Fist</code>.
+          </li>
+          <li>
+            <span class="font-semibold">Tiền xử lý:</span> Chuẩn hóa toàn bộ đầu vào về [0, 1], chuyển dữ liệu về dạng
+            vector phẳng 1 chiều để huấn luyện mô hình.
+          </li>
+          <li>
+            <span class="font-semibold">Augmentation:</span> Tăng cường dữ liệu bằng cách áp dụng nhiễu Gaussian, thay
+            đổi vị trí nhẹ, hoặc nhân bản với biến đổi nhỏ để tăng khả năng tổng quát của mô hình.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-semibold mb-2 text-green-600">2. Xây dựng mô hình học sâu</h3>
+        <ul class="list-disc ml-6 space-y-2 text-lg">
+          <li>
+            <span class="font-semibold">Kiến trúc:</span> Mô hình DNN (Deep Neural Network) gồm các lớp Dense và
+            Dropout, huấn luyện phân loại 4 loại cử chỉ dựa trên tọa độ đầu vào từ MediaPipe.
+          </li>
+          <li>
+            <span class="font-semibold">Ví dụ với Keras:</span>
+            <pre class="bg-gray-900 text-white text-xs rounded p-3 overflow-x-auto mt-2"><code>
+| Lớp                | Mô tả                                                      |
+| ------------------ | ---------------------------------------------------------- |
+| Dense(512), ELU    | Lớp ẩn đầu tiên, nhiều nơ-ron nhất để trích đặc trưng mạnh |
+| BatchNormalization | Ổn định và tăng tốc huấn luyện                             |
+| Dropout(0.3)       | Giảm overfitting                                           |
+| Dense(256), ELU    | Lớp ẩn tiếp theo                                           |
+| BatchNormalization | Chuẩn hóa đầu ra lớp ẩn                                    |
+| Dropout(0.3)       |                                                            |
+| Dense(128), ELU    | Giảm dần chiều không gian                                  |
+| BatchNormalization |                                                            |
+| Dropout(0.25)      |                                                            |
+| Dense(64), ELU     |                                                            |
+| BatchNormalization |                                                            |
+| Dropout(0.2)       |                                                            |
+| Dense(32), ELU     | Lớp cuối cùng trước softmax                                |
+| BatchNormalization |                                                            |
+| Dropout(0.2)       |                                                            |
+| Dense(4), softmax  | Lớp đầu ra — phân loại 4 cử chỉ tay                        |
+
+        </code></pre>
+          </li>
+          <li>
+            <span class="font-semibold">Huấn luyện:</span> Dữ liệu được chia thành tập huấn luyện (75%) và kiểm tra
+            (25%). Áp dụng kỹ thuật EarlyStopping để tránh overfitting.
+          </li>
+          <li>
+            <span class="font-semibold">Triển khai:</span> Mô hình sau khi huấn luyện được tích hợp trực tiếp vào hệ
+            thống nhận diện cử chỉ theo thời gian thực từ webcam.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="min-h-screen flex flex-col justify-start items-start px-6 md:px-20 pt-10">
+      <h2 class="text-4xl font-bold mb-4 border-b-4 border-purple-500 pb-2">Tính năng nổi bật</h2>
+      <ul class="list-disc ml-6 space-y-4 text-lg">
+        <li>Nhận diện cử chỉ tay theo thời gian thực từ webcam thông thường, không cần thiết bị phần cứng bổ sung.</li>
+        <li>Điều khiển trình phát video (VLC) bằng tay: <span class="font-semibold text-blue-600">phát/tạm dừng, tua
+            nhanh/chậm, tăng/giảm âm lượng</span>.</li>
+        <li>Giao diện thân thiện, hiển thị camera nhỏ ở góc, hỗ trợ full màn hình khi phát video.</li>
+        <li>Hỗ trợ mở rộng thêm các cử chỉ mới hoặc tích hợp điều khiển phần mềm trình chiếu như PowerPoint.</li>
+        <li>Ứng dụng <span class="font-semibold text-green-600">MediaPipe</span> để trích xuất keypoints và <span
+            class="font-semibold text-green-600">OpenCV</span> để xử lý video và tương tác thời gian thực.</li>
       </ul>
     </section>
-  </main>
 
+
+    <!-- Demo Section -->
+    <section id="demo" class="min-h-[40vh] flex flex-col items-center justify-center px-6 md:px-20 py-10">
+      <h2 class="text-4xl font-bold mb-4 border-b-4 border-blue-500 pb-2">Demo thực tế</h2>
+      <div
+        class="w-full max-w-2xl rounded-xl overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700 mb-6">
+        <video controls poster="image/AnhPhatVideo.jpg" class="w-full h-72 object-cover bg-black">
+          <source src="video/demo-gesture-control.mp4" type="video/mp4">
+          Trình duyệt của bạn không hỗ trợ video.
+        </video>
+      </div>
+      <p class="text-lg text-gray-700 dark:text-gray-300 text-center">
+        Xem video demo để thấy cách hệ thống nhận diện cử chỉ và điều khiển trình phát video một cách mượt mà, tự nhiên.
+      </p>
+    </section>
+
+    <!-- Challenges & Solutions Section -->
+    <section id="challenges" class="min-h-[40vh] flex flex-col justify-start items-start px-6 md:px-20 py-10">
+      <h2 class="text-4xl font-bold mb-4 border-b-4 border-yellow-500 pb-2">Khó khăn & Giải pháp</h2>
+      <ul class="list-disc ml-6 space-y-4 text-lg">
+        <li><span class="font-semibold text-red-500">Khó khăn:</span> Nhận diện cử chỉ trong điều kiện ánh sáng yếu hoặc
+          nền phức tạp.</li>
+        <li><span class="font-semibold text-red-500">Khó khăn:</span> Phân biệt các cử chỉ tương tự nhau, tránh thao tác
+          nhầm.</li>
+        <li><span class="font-semibold text-green-500">Giải pháp:</span> Sử dụng thuật toán lọc nhiễu, tăng cường dữ
+          liệu huấn luyện và tối ưu pipeline xử lý ảnh.</li>
+        <li><span class="font-semibold text-green-500">Giải pháp:</span> Thiết kế bộ cử chỉ rõ ràng, dễ nhận diện và
+          thân thiện với người dùng.</li>
+      </ul>
+    </section>
+
+    <!-- Team/Author Section -->
+    <section id="author" class="min-h-[30vh] flex flex-col items-center justify-center px-6 md:px-20 py-10">
+      <h2 class="text-3xl font-bold mb-4 border-b-4 border-green-500 pb-2">Tác giả & Đóng góp</h2>
+      <div class="text-lg text-center">
+        <p><span class="font-semibold">Đặng Nguyễn Minh Thiện</span> – Xây dựng ý tưởng, hiện thực hóa giải pháp AI,
+          phát triển giao diện và tối ưu trải nghiệm người dùng.</p>
+        <p class="mt-2">Mọi ý kiến đóng góp hoặc hợp tác, vui lòng liên hệ qua email: <a
+            href="mailto:thienlenin12@gmail.com"
+            class="text-blue-600 dark:text-blue-400 underline">thienlenin12@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+  <!-- Technology Floating Box -->
+  <section id="technology"
+    class="fixed bottom-4 right-4 bg-gray-900/80 backdrop-blur-md text-gray-100 p-5 rounded-xl shadow-2xl border border-gray-700 w-72 text-sm z-50">
+    <h2 class="text-lg font-bold mb-3 flex items-center gap-2">
+      <i class="fas fa-tools text-yellow-400"></i> Công nghệ sử dụng
+    </h2>
+    <ul class="space-y-2">
+      <li>
+        <span class="font-semibold text-blue-400"><i class="fas fa-code mr-2"></i>Ngôn ngữ:</span>
+        <span class="text-gray-200">Python</span>
+      </li>
+      <li>
+        <span class="font-semibold text-green-400"><i class="fas fa-brain mr-2"></i>AI/Computer Vision:</span>
+        <span class="text-gray-200">OpenCV, Mediapipe</span>
+      </li>
+      <li>
+        <span class="font-semibold text-pink-400"><i class="fas fa-laptop-code mr-2"></i>IDE:</span>
+        <span class="text-gray-200">VS Code, Jupyter Notebook</span>
+      </li>
+      <li>
+        <span class="font-semibold text-yellow-300"><i class="fas fa-layer-group mr-2"></i>Kiến trúc:</span>
+        <span class="text-gray-200">Modular, dễ mở rộng</span>
+      </li>
+    </ul>
+  </section>
   <!-- FOOTER -->
   <footer id="footer" class="text-center py-6 text-gray-500 text-sm bg-[#1f1f1f]">
     <div class="container mx-auto px-6">
@@ -164,7 +285,7 @@
           value: "#ffffff" // Màu của hạt
         },
         shape: {
-          type: "circle" // Hình dạng hạt (circle, edge, triangle, polygon, star, etc.)
+          type: "circle"
         },
         opacity: {
           value: 0.5,

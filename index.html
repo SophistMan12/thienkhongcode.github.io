@@ -8,11 +8,7 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-    }
-  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
@@ -21,10 +17,12 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
@@ -145,18 +143,20 @@
       <!-- CV Section -->
       <div class="mt-12" data-aos="fade-up">
         <h3 class="text-4xl font-bold mb-6 border-b-4 border-yellow-500 pb-2">📄 CV</h3>
-        <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="flex md:flex-row items-center gap-6 w-full md:w-auto">
           <!-- CV Tiếng Anh -->
           <a href="assets/ENG_CV_DANGNGUYENMINHTHIEN.pdf" target="_blank"
-            class="flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-110 hover:rotate-1">
-            <i class="fas fa-file-pdf text-2xl mr-3"></i>
-            <span class="text-lg font-semibold">Tải CV Tiếng Anh</span>
+            class="w-full md:w-72 flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-110 hover:rotate-1 text-center">
+            <i class="fas fa-file-pdf text-2xl mr-2"></i>
+            <span class="hidden md:inline text-lg font-semibold">Download English CV</span>
+            <span class="inline md:hidden text-lg font-semibold">EngCV</span>
           </a>
           <!-- CV Tiếng Việt -->
           <a href="assets/CV_DANGNGUYENMINHTHIEN.pdf" target="_blank"
-            class="flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-110 hover:-rotate-1">
-            <i class="fas fa-file-pdf text-2xl mr-3"></i>
-            <span class="text-lg font-semibold">Tải CV Tiếng Việt</span>
+            class="w-full md:w-72 flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-110 hover:-rotate-1 text-center">
+            <i class="fas fa-file-pdf text-2xl mr-2"></i>
+            <span class="hidden md:inline text-lg font-semibold">Tải CV Tiếng Việt</span>
+            <span class="inline md:hidden text-lg font-semibold">VieCV</span>
           </a>
         </div>
       </div>
@@ -164,13 +164,14 @@
 
     <!-- Projects Section -->
     <section id="projects"
-      class="relative min-h-screen flex flex-row md:flex-col items-center justify-center px-8 md:px-24 text-white">
+      class="relative min-h-screen flex flex-col items-center justify-center px-4 md:px-24 text-white">
       <!-- Particles Background -->
       <div id="particles-js" class="absolute inset-0 -z-10"></div>
       <h2 class="text-4xl font-bold mb-6 border-b-4 border-purple-500 pb-2" data-aos="fade-up">Dự án cá nhân</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project 1 -->
-        <div class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+        <div class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col"
+          data-aos="fade-up">
           <div class="relative group">
             <img src="image/background.jpg" alt="Hệ thống đặt bàn nhà hàng"
               class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
@@ -179,13 +180,14 @@
               <p class="text-white text-sm">Hệ thống quản lý đặt bàn nhà hàng</p>
             </div>
           </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-2">Hệ thống đặt bàn cho nhà hàng</h3>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Hệ thống quản lý đặt bàn nhà hàng cho phép nhân viên dễ dàng đặt bàn hỗ trợ quản lý hoạt động nhà hàng tốt.
+          <div class="p-4 md:p-8 flex-1 flex flex-col">
+            <h3 class="text-xl md:text-2xl font-semibold mb-2">Hệ thống đặt bàn cho nhà hàng</h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base">
+              Hệ thống quản lý đặt bàn nhà hàng cho phép nhân viên dễ dàng đặt bàn hỗ trợ quản lý hoạt động nhà hàng
+              tốt.
             </p>
             <a href="project-restaurant.html"
-              class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+              class="inline-block mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition text-sm md:text-base">
               Xem chi tiết
             </a>
             <div class="mt-4">
@@ -197,8 +199,8 @@
           </div>
         </div>
         <!-- Project 2 -->
-        <div class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up"
-          data-aos-delay="100">
+        <div class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col"
+          data-aos="fade-up" data-aos-delay="100">
           <div class="relative group">
             <img src="image/AnhMobileNetV2.png" alt="Nhận dạng hình ảnh với CNN"
               class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
@@ -207,14 +209,14 @@
               <p class="text-white text-sm">Mô hình phân loại hình ảnh với CNN</p>
             </div>
           </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-2">Nhận dạng hình ảnh với CNN</h3>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
+          <div class="p-4 md:p-8 flex-1 flex flex-col">
+            <h3 class="text-xl md:text-2xl font-semibold mb-2">Nhận dạng hình ảnh với CNN</h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base">
               Mô hình phân loại chó, mèo, ngựa bằng Keras, sử dụng Augmentation và Normalization để cải thiện độ chính
               xác.
             </p>
             <a href="" target="_blank"
-              class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+              class="inline-block mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition text-sm md:text-base">
               Xem chi tiết
             </a>
             <div class="mt-4">
@@ -226,8 +228,8 @@
           </div>
         </div>
         <!-- Project 3 -->
-        <div class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up"
-          data-aos-delay="200">
+        <div class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col"
+          data-aos="fade-up" data-aos-delay="200">
           <div class="relative group">
             <img src="image/AnhPhatVideo.jpg" alt="Phát video và điều khiển bằng cử chỉ tay"
               class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
@@ -236,13 +238,13 @@
               <p class="text-white text-sm">Phát video và điều khiển bằng cử chỉ tay</p>
             </div>
           </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-2">Điều khiển trình video bằng cử chỉ tay</h3>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
+          <div class="p-4 md:p-8 flex-1 flex flex-col">
+            <h3 class="text-xl md:text-2xl font-semibold mb-2">Điều khiển trình video cử chỉ tay</h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base">
               Sử dụng OpenCV và Mediapipe để phát video và điều khiển bằng cử chỉ tay, giúp tương tác dễ dàng hơn.
             </p>
-            <a href="project-videoGestureControl.html" target="_blank"
-              class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+            <a href="project-videoGestureControl.html"
+              class="inline-block mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition text-sm md:text-base">
               Xem chi tiết
             </a>
             <div class="mt-4">
@@ -256,6 +258,7 @@
       </div>
     </section>
 
+    <!-- Blogs Section -->
     <section id="blog" class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 ">
       <h2 class="text-4xl font-bold mb-6 border-b-4 border-yellow-500 pb-2" data-aos="fade-up">Blog</h2>
       <article class="rounded-lg shadow-lg p-8" data-aos="fade-up">
@@ -302,9 +305,6 @@
       <p class="text-lg mt-2">📱 Zalo: <a href="https://zalo.me/0908170045" target="_blank"
           class="text-blue-600 dark:text-blue-400 underline">zalo.me/0908170045(Đặng Nguyễn Minh Thiện)</a></p>
     </section>
-    <button id="scroll-to-top" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
-      <i class="fas fa-arrow-up"></i>
-    </button>
   </main>
   <!-- FOOTER -->
   <footer id="footer" class="text-center py-6 text-gray-500 text-sm background-1f1f1f dark:bg-[#1f1f1f]">
@@ -324,7 +324,8 @@
         <a href="https://zalo.me/0908170045" target="_blank" class="text-blue-600 dark:text-blue-400 underline">
           zalo.me/0908170045(Đặng Nguyễn Minh Thiện)
         </a>
-      <p>&copy; 2025 ThienKhongCode. All rights reserved.</p>
+      </p>
+      &copy; 2025 ThienKhongCode. All rights reserved.
     </div>
   </footer>
 
@@ -334,7 +335,6 @@
   </button>
   <!-- Scripts -->
   <script src="js/layout.js"></script>
-  <script src="js/theme-toggle.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
