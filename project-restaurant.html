@@ -8,32 +8,26 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
     }
   </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">F
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 
-<body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
+<body class="font-sans dark:bg-[#1f1f1f] dark:text-gray-200">
 
   <!-- HEADER -->
   <header>
@@ -98,53 +92,11 @@
     <!-- Features Section -->
     <section id="features" class="min-h-screen flex flex-col justify-start items-start px-6 md:px-20 pt-10">
       <h2 class="text-4xl font-bold mb-4 border-b-4 border-red-500 pb-2">Một số chức năng nổi bật</h2>
-
-      <!-- Swiper Container -->
-      <div class="swiper-container w-full">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div class="w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-lg relative">
-              <img src="image/AnhChucNang1.jpg" alt="Chức năng 1" class="w-full h-full object-cover">
-              <p
-                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm md:text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
-                Chức năng 1: Đăng nhập theo tài khoản
-              </p>
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <div class="w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-lg relative">
-              <img src="image/AnhChucNang2.jpg" alt="Chức năng 2" class="w-full h-full object-cover">
-              <p
-                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm md:text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
-                Chức năng 2: Đơn giản đặt món
-              </p>
-            </div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="swiper-slide">
-            <div class="w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-lg relative">
-              <img src="image/AnhChucNang3.jpg" alt="Chức năng 3" class="w-full h-full object-cover">
-              <p
-                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm md:text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
-                Chức năng 3: Báo cáo chi tiết của nhân viên
-              </p>
-            </div>
-          </div>
-          <!-- Slide 4 -->
-          <div class="swiper-slide">
-            <div class="w-full h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-lg relative">
-              <img src="image/AnhChucNang4.jpg" alt="Chức năng 4" class="w-full h-full object-cover">
-              <p
-                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm md:text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
-                Chức năng 4: Quản lý nhà hàng
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
+      <div id="slider">
+        <p id="text-content"
+          class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-sm md:text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+          Chức năng 1: Đăng nhập theo tài khoản
+        </p>
       </div>
     </section>
 
@@ -183,7 +135,7 @@
       </div>
     </section>
 
-        <!-- Technology Floating Box -->
+    <!-- Technology Floating Box -->
     <section id="technology"
       class="fixed bottom-4 right-4 bg-gray-900/80 backdrop-blur-md text-gray-100 p-5 rounded-xl shadow-2xl border border-gray-700 w-72 text-sm z-50">
       <h2 class="text-lg font-bold mb-3 flex items-center gap-2">
@@ -215,7 +167,7 @@
           <span class="text-gray-200">Java Swing</span>
         </li>
       </ul>
-    </section>F
+    </section>
 
   </main>
 
@@ -248,7 +200,6 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/layout.js"></script>
   <script src="js/swiper.js"></script>
-  <script src="js/theme-toggle.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
