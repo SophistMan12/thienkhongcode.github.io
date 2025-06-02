@@ -82,11 +82,27 @@ article:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 #particles-js {
-  position: fixed; /* Đặt cố định để bao phủ toàn bộ trang */
-  inset: 0; /* Bao phủ toàn bộ vùng hiển thị */
-  z-index: -10; /* Đặt ở phía sau tất cả các phần tử khác */
-  width: 100%; /* Chiều rộng 100% */
-  height: 100%; /* Chiều cao 100% */
+  position: fixed;
+  /* Đặt cố định để bao phủ toàn bộ trang */
+  inset: 0;
+  /* Bao phủ toàn bộ vùng hiển thị */
+  z-index: -10;
+  /* Đặt ở phía sau tất cả các phần tử khác */
+  width: 100%;
+  /* Chiều rộng 100% */
+  height: 100%;
+  /* Chiều cao 100% */
 }
 
+#slider {
+  width: 100%;
+  height: 600px;
+  /* Chiều cao của slider */
+  overflow: hidden;
+  /* Ẩn các phần tử tràn ra ngoài */
+  background: url(../image/AnhChucNang1.jpg) no-repeat top center/cover;
+  position: relative;
+  overflow: hidden;
+}

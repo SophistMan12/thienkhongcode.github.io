@@ -8,13 +8,16 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <!-- AOS (Animate On Scroll) -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
@@ -25,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
+<body class="font-sans dark:bg-[#1f1f1f] dark:text-gray-200">
 
   <!-- HEADER -->
   <header>
@@ -33,7 +36,7 @@
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="text-gray-900 dark:text-gray-200">
+  <main class="text-gray-900 dark:text-gray-200 padding-0">
 
     <!-- About Section -->
     <section id="about"
@@ -169,6 +172,7 @@
       <div id="particles-js" class="absolute inset-0 -z-10"></div>
       <h2 class="text-4xl font-bold mb-6 border-b-4 border-purple-500 pb-2" data-aos="fade-up">Dự án cá nhân</h2>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
         <!-- Project 1 -->
         <div class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col"
           data-aos="fade-up">
@@ -183,6 +187,7 @@
           <div class="p-4 md:p-8 flex-1 flex flex-col">
             <h3 class="text-xl md:text-2xl font-semibold mb-2">Hệ thống đặt bàn cho nhà hàng</h3>
             <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base">
+
               Hệ thống quản lý đặt bàn nhà hàng cho phép nhân viên dễ dàng đặt bàn hỗ trợ quản lý hoạt động nhà hàng
               tốt.
             </p>
@@ -212,7 +217,6 @@
           <div class="p-4 md:p-8 flex-1 flex flex-col">
             <h3 class="text-xl md:text-2xl font-semibold mb-2">Nhận dạng hình ảnh với CNN</h3>
             <p class="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base">
-              Mô hình phân loại chó, mèo, ngựa bằng Keras, sử dụng Augmentation và Normalization để cải thiện độ chính
               xác.
             </p>
             <a href="" target="_blank"
@@ -245,6 +249,7 @@
             </p>
             <a href="project-videoGestureControl.html"
               class="inline-block mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition text-sm md:text-base">
+
               Xem chi tiết
             </a>
             <div class="mt-4">
