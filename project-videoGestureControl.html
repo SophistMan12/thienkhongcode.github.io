@@ -106,24 +106,24 @@
           <li>
             <span class="font-semibold">Ví dụ với Keras:</span>
             <pre class="bg-gray-900 text-white text-xs rounded p-3 overflow-x-auto mt-2"><code>
-| Lớp                | Mô tả                                                      |
-| ------------------ | ---------------------------------------------------------- |
-| Dense(512), ELU    | Lớp ẩn đầu tiên, nhiều nơ-ron nhất để trích đặc trưng mạnh |
-| BatchNormalization | Ổn định và tăng tốc huấn luyện                             |
-| Dropout(0.3)       | Giảm overfitting                                           |
-| Dense(256), ELU    | Lớp ẩn tiếp theo                                           |
-| BatchNormalization | Chuẩn hóa đầu ra lớp ẩn                                    |
-| Dropout(0.3)       |                                                            |
-| Dense(128), ELU    | Giảm dần chiều không gian                                  |
-| BatchNormalization |                                                            |
-| Dropout(0.25)      |                                                            |
-| Dense(64), ELU     |                                                            |
-| BatchNormalization |                                                            |
-| Dropout(0.2)       |                                                            |
-| Dense(32), ELU     | Lớp cuối cùng trước softmax                                |
-| BatchNormalization |                                                            |
-| Dropout(0.2)       |                                                            |
-| Dense(4), softmax  | Lớp đầu ra — phân loại 4 cử chỉ tay                        |
+| Lớp                | Mô tả                             |
+| ------------------ | ----------------------------------|
+| Dense(512), ELU    | Lớp ẩn đầu tiên,                  |
+| BatchNormalization | Ổn định và tăng tốc huấn luyện    |
+| Dropout(0.3)       | Giảm overfitting                  |
+| Dense(256), ELU    | Lớp ẩn tiếp theo                  |
+| BatchNormalization | Chuẩn hóa đầu ra lớp ẩn           |
+| Dropout(0.3)       |                                   |
+| Dense(128), ELU    | Giảm dần chiều không gian         |
+| BatchNormalization |                                   |
+| Dropout(0.25)      |                                   |
+| Dense(64), ELU     |                                   |
+| BatchNormalization |                                   |
+| Dropout(0.2)       |                                   |
+| Dense(32), ELU     | Lớp cuối cùng trước softmax       |
+| BatchNormalization |                                   |
+| Dropout(0.2)       |                                   |
+| Dense(4), softmax  | Lớp đầu ra phân loại 4 cử chỉ tay |
 
         </code></pre>
           </li>
