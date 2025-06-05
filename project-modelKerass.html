@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="vi" class="dark">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project | MODEL KERAS</title>
-
+  <title>Project | MODEL KERASS</title>
   <!-- Theme Initialization -->
   <script src="js/theme-init.js"></script>
-
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-    }
+    tailwind.config = { darkMode: 'class' }
   </script>
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
-
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-
 <body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
 
   <!-- HEADER -->
@@ -38,155 +29,78 @@
 
   <!-- MAIN CONTENT -->
   <main class="text-gray-900 dark:text-gray-200">
-
-    <!-- Overview Section -->
-    <section id="overview"
-      class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-20 bg-white dark:bg-[#1f1f1f]">
-      <!-- Introduction Content -->
-      <div class="text-center md:text-left max-w-xl">
-        <h2 class="text-4xl font-bold mb-4 border-b-4 border-blue-500 inline-block pb-1">Giới thiệu tổng quan về dự án
-        </h2>
-        <p class="text-lg leading-relaxed mt-4">
-          Mô hình phân loại hình ảnh với CNN (Convolutional Neural Network) sử dụng Keras và TensorFlow. Dự án này
-          được thực hiện trong khuôn khổ môn học "Deep learning" tại trường Đại học Công nghiệp TP.HCM. Mục tiêu của dự án
-          là xây dựng một mô hình có khả năng phân loại hình ảnh với độ chính xác cao, sử dụng các kỹ thuật học sâu
-        </p>
-        <p class="text-lg font-semibold mt-4 text-red-500">
-          Tình trạng: Đã hoàn thành 80% và không còn tiếp tục phát triển.
-        </p>
-        <p class="text-lg mt-4">
-          🔗 GitHub: <a href="https://github.com/bang12bang007/QuanLiDatBanNhaHang" target="_blank"
-            class="text-blue-600 dark:text-blue-400 underline">github.com/bang12bang007/QuanLiDatBanNhaHang</a>
-        </p>
-      </div>
-
-      <!-- Background Image -->
-      <div
-        class="w-full md:w-1/3 max-w-sm rounded-2xl overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700">
-        <img src="image/background.jpg" alt="Ảnh background dự án"
-          class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110">
+    <!-- Giới thiệu -->
+    <section class="max-w-4xl mx-auto py-12 px-4 md:px-0" data-aos="fade-up">
+      <h1 class="text-4xl font-bold mb-4 text-blue-600 dark:text-blue-400">PRO MODEL KERASS</h1>
+      <p class="text-lg mb-6">
+        <strong>PRO MODEL KERASS</strong> là dự án ứng dụng trí tuệ nhân tạo với Keras, giúp xây dựng, huấn luyện và triển khai các mô hình học sâu một cách dễ dàng, trực quan và hiệu quả.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-8">
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">#AI</span>
+        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">#Keras</span>
+        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">#DeepLearning</span>
+        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">#Python</span>
       </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team"
-      class="min-h-screen flex flex-col justify-center items-start px-6 md:px-20 bg-gray-50 dark:bg-gray-800">
-      <div class="w-full h-[33vh] rounded-2xl overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700">
-        <img src="image/AnhNhomDH.jpg" alt="Ảnh background dự án"
-          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110">
-      </div>
-
-      <div>
-        <h2 class="text-4xl font-bold mb-4 border-b-4 border-green-500 pb-2">Thành viên thực hiện & Vai trò</h2>
-        <ul class="list-disc ml-6 space-y-2 text-lg">
-          <li><strong>Đặng Nguyễn Minh Thiện:</strong> Phụ trách logic hoạt động và tài liệu, hiện thực phần hoạt động
-            của quản lý</li>
-          <li><strong>Ngô Đăng Khoa:</strong> Captain dự án, giải quyết các tính năng, luồng hoạt chính phần mềm</li>
-          <li><strong>Nguyễn Đức Cường:</strong> Thiết kế giao diện, khiến mọi thứ đẹp đẽ và tương tác dễ dàng hơn</li>
-          <li><strong>Võ Ngọc Trung Quân:</strong> Người phụ trách các chức năng phụ, và hoàn chỉnh mọi thứ</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features"
-      class="min-h-screen flex flex-col justify-start items-start px-6 md:px-20 pt-10 bg-white dark:bg-[#1f1f1f]">
-      <h2 class="text-4xl font-bold mb-4 border-b-4 border-red-500 pb-2">Một số chức năng nổi bật</h2>
-
-      <!-- Swiper Container -->
-      <div class="swiper-container w-full">
+    <!-- Swiper Demo -->
+    <section class="max-w-3xl mx-auto mb-12" data-aos="fade-up">
+      <div class="swiper-container rounded-lg shadow-lg">
         <div class="swiper-wrapper">
-          <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div class="w-full h-[700px] rounded-xl overflow-hidden shadow-lg relative">
-              <img src="image/AnhChucNang1.jpg" alt="Chức năng 1" class="w-full h-full object-cover">
-              <p
-                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
-                Chức năng 1: Đăng nhập theo tài khoản
-              </p>
-            </div>
+            <img src="image/keras-demo-1.jpg" alt="Demo 1" class="w-full h-64 object-cover rounded-lg">
           </div>
-          <!-- Slide 2 -->
           <div class="swiper-slide">
-            <div class="w-full h-[700px] rounded-xl overflow-hidden shadow-lg relative">
-              <img src="image/AnhChucNang2.jpg" alt="Chức năng 2" class="w-full h-full object-cover">
-              <p
-                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
-                Chức năng 2: Đơn giản đặt món
-              </p>
-            </div>
+            <img src="image/keras-demo-2.jpg" alt="Demo 2" class="w-full h-64 object-cover rounded-lg">
           </div>
-          <!-- Slide 3 -->
           <div class="swiper-slide">
-            <div class="w-full h-[700px] rounded-xl overflow-hidden shadow-lg relative">
-              <img src="image/AnhChucNang3.jpg" alt="Chức năng 3" class="w-full h-full object-cover">
-              <p
-                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
-                Chức năng 3: Báo cáo chi tiết của nhân viên
-              </p>
-            </div>
-          </div>
-          <!-- Slide 4 -->
-          <div class="swiper-slide">
-            <div class="w-full h-[700px] rounded-xl overflow-hidden shadow-lg relative">
-              <img src="image/AnhChucNang4.jpg" alt="Chức năng 4" class="w-full h-full object-cover">
-              <p
-                class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-lg font-semibold text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
-                Chức năng 4: Quản lý nhà hàng
-              </p>
-            </div>
+            <img src="image/keras-demo-3.jpg" alt="Demo 3" class="w-full h-64 object-cover rounded-lg">
           </div>
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </section>
 
-    <!-- Challenges, Advantages, and Results Section -->
-    <section id="challenges-results" class="min-h-screen px-6 md:px-20 py-10 bg-gray-50 dark:bg-gray-800">
-      <h2 class="text-4xl font-bold mb-6 border-b-4 border-yellow-500 pb-2">Khó khăn, Thuận lợi và Kết quả</h2>
-
-      <!-- Challenges -->
-      <div class="mb-8">
-        <h3 class="text-2xl font-semibold mb-4 text-red-500">Khó khăn</h3>
-        <ul class="list-disc ml-6 space-y-2 text-lg">
-          <li>Hạn chế về thời gian để hoàn thành dự án đúng tiến độ.</li>
-          <li>Thiếu kinh nghiệm trong việc triển khai các tính năng phức tạp.</li>
-          <li>Khó khăn trong việc phối hợp giữa các thành viên nhóm.</li>
-        </ul>
-      </div>
-
-      <!-- Advantages -->
-      <div class="mb-8">
-        <h3 class="text-2xl font-semibold mb-4 text-green-500">Thuận lợi</h3>
-        <ul class="list-disc ml-6 space-y-2 text-lg">
-          <li>Có sự hỗ trợ từ giảng viên và tài liệu tham khảo phong phú.</li>
-          <li>Nhóm làm việc đoàn kết và có tinh thần trách nhiệm cao.</li>
-          <li>Sử dụng các công cụ hiện đại như Maven và NetBeans IDE để tăng hiệu quả làm việc.</li>
-        </ul>
-      </div>
-
-      <!-- Results -->
-      <div>
-        <h3 class="text-2xl font-semibold mb-4 text-blue-500">Kết quả</h3>
-        <ul class="list-disc ml-6 space-y-2 text-lg">
-          <li>Hoàn thành 80% các tính năng chính của hệ thống.</li>
-          <li>Giao diện người dùng thân thiện, dễ sử dụng.</li>
-          <li>Hệ thống hoạt động ổn định và đáp ứng được các yêu cầu cơ bản.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Technology Section -->
-    <section id="technology"
-      class="fixed bottom-12 left-4 bg-gray-300 text-gray-800 dark:bg-gray-800 dark:text-gray-200 p-4 rounded-lg shadow-lg z-50">
-      <h2 class="text-xl font-bold mb-2">🛠️ Công nghệ sử dụng</h2>
-      <ul class="space-y-2 text-sm list-disc list-inside">
-        <li><strong>Ngôn ngữ lập trình:</strong> Java</li>
-        <li><strong>Công cụ quản lý dự án:</strong> Maven</li>
-        <li><strong>Môi trường phát triển:</strong> NetBeans IDE</li>
-        <li><strong>Cấu trúc dự án:</strong> Chuẩn Maven</li>
-        <li><strong>Kiến trúc phần mềm:</strong> Phân lớp rõ ràng</li>
-        <li><strong>Giao diện người dùng:</strong> Java Swing</li>
+    <!-- Tính năng -->
+    <section class="max-w-4xl mx-auto mb-12 px-4 md:px-0" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Tính năng nổi bật</h2>
+      <ul class="list-disc list-inside space-y-2 text-lg">
+        <li>Xây dựng mô hình học sâu với giao diện trực quan.</li>
+        <li>Huấn luyện và đánh giá mô hình ngay trên ứng dụng.</li>
+        <li>Hỗ trợ nhiều loại mạng: CNN, RNN, LSTM, Dense,...</li>
+        <li>Xuất và triển khai mô hình dễ dàng.</li>
+        <li>Biểu đồ trực quan hóa quá trình huấn luyện.</li>
+        <li>Tích hợp với các thư viện Python phổ biến: NumPy, Pandas, Matplotlib.</li>
       </ul>
+    </section>
+
+    <!-- Công nghệ sử dụng -->
+    <section class="max-w-4xl mx-auto mb-12 px-4 md:px-0" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Công nghệ sử dụng</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <ul class="space-y-2 text-base">
+          <li><strong>Ngôn ngữ lập trình:</strong> Python</li>
+          <li><strong>Thư viện chính:</strong> Keras, TensorFlow</li>
+          <li><strong>Giao diện người dùng:</strong> Tkinter/PyQt5</li>
+        </ul>
+        <ul class="space-y-2 text-base">
+          <li><strong>Trực quan hóa:</strong> Matplotlib, Seaborn</li>
+          <li><strong>Quản lý dữ liệu:</strong> Pandas, NumPy</li>
+          <li><strong>Kiến trúc:</strong> MVC, Modular</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Liên hệ -->
+    <section class="max-w-4xl mx-auto mb-16 px-4 md:px-0" data-aos="fade-up">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Liên hệ & Đóng góp</h2>
+      <p class="mb-2">📧 Email: <a href="mailto:thienlenin12@gmail.com" class="text-blue-600 dark:text-blue-400 underline">thienlenin12@gmail.com</a></p>
+      <p class="mb-2">🔗 GitHub: <a href="https://github.com/SophistMan12" target="_blank" class="text-blue-600 dark:text-blue-400 underline">github.com/SophistMan12</a></p>
+      <p class="mb-2">📱 Zalo: <a href="https://zalo.me/0908170045" target="_blank" class="text-blue-600 dark:text-blue-400 underline">zalo.me/0908170045 (Đặng Nguyễn Minh Thiện)</a></p>
     </section>
   </main>
 
@@ -196,19 +110,23 @@
   </footer>
 
   <!-- Back to Top Button -->
-  <button id="back-to-top" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
+  <button id="back-to-top" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden flex items-center justify-center">
     <i class="fas fa-arrow-up"></i>
   </button>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/layout.js"></script>
-  <script src="js/swiper.js"></script>
   <script src="js/theme-toggle.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-
+    // Swiper
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
     // Back to Top Button Logic
     const backToTopButton = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
@@ -219,12 +137,8 @@
       }
     });
     backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
-
 </html>
