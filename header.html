@@ -3,11 +3,11 @@
 
     <!-- Logo bên trái -->
     <div class="flex items-center space-x-4 min-w-0">
-      <!-- Luôn hiển thị logo -->
-      <a href="index.html"> <img src="/image/android-chrome-192x192.png" alt="Avatar"
-          class="h-full max-h-16 aspect-square rounded-full border border-gray-600 object-contain" /></a>
-      <!-- Phần text chỉ hiện khi đủ không gian -->
-      <div class="hidden md:flex flex-col min-w-0 truncate">
+      <a href="index.html">
+        <img src="/image/android-chrome-192x192.png" alt="Avatar"
+          class="h-full max-h-16 aspect-square rounded-full border border-gray-600 object-contain" />
+      </a>
+      <div class=" md:flex flex-col min-w-0 truncate">
         <div class="text-2xl font-bold text-white truncate">
           <a href="index.html">ThienKhongCode</a>
         </div>
@@ -17,23 +17,45 @@
       </div>
     </div>
 
-    <!-- Menu + Đường line -->
-    <div class="flex items-center flex-1 ml-4 overflow-hidden">
-      <!-- Đường kẻ bên trái -->
-      <div class="flex-1 h-0.5 bg-white"></div>
-
-      <!-- Menu chữ -->
-      <nav class="flex space-x-4 px-4 text-sm text-gray-300 font-medium overflow-x-auto whitespace-nowrap">
+    <!-- Menu bên phải -->
+    <div class="w-full flex-1 flex items-center justify-center relative">
+      <!-- Line trái -->
+      <div class="flex-1 h-0.5 bg-white/30 mx-2 hidden md:block"></div>
+      <!-- Menu chữ (ẩn trên mobile) -->
+      <nav
+        class="hidden md:flex items-center space-x-4 px-4 text-sm text-gray-300 font-medium overflow-x-auto whitespace-nowrap">
         <a href="index.html#about" class="hover:text-white transition truncate">Giới thiệu</a>
         <a href="index.html#skills" class="hover:text-white transition truncate">Kỹ năng</a>
         <a href="index.html#projects" class="hover:text-white transition truncate">Dự án</a>
         <a href="index.html#blog" class="hover:text-white transition truncate">Blog</a>
         <a href="index.html#contact" class="hover:text-white transition truncate">Liên hệ</a>
       </nav>
+      <!-- Line phải -->
+      <div class="flex-1 h-0.5 bg-white/30 mx-2 hidden md:block"></div>
 
-      <!-- Đường kẻ bên phải -->
-      <div class="flex-1 h-0.5 bg-white"></div>
+      <!-- Hamburger button (hiện trên mobile) - Đặt sát phải -->
+      <button id="menu-toggle"
+        class="md:hidden absolute right-0 top-1/2 -translate-y-1/2 text-gray-300 hover:text-white focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Dropdown menu (mobile) -->
+      <div id="mobile-menu"
+        class="absolute top-full left-0 w-full bg-[#232323] shadow-lg rounded-b-lg z-50 flex flex-col md:hidden transition-all duration-300 ease-in-out overflow-hidden max-h-0"
+        style="pointer-events: none;">
+        <a href="index.html#about"
+          class="block px-6 py-3 text-gray-300 hover:bg-blue-600 hover:text-white transition">Giới thiệu</a>
+        <a href="index.html#skills"
+          class="block px-6 py-3 text-gray-300 hover:bg-blue-600 hover:text-white transition">Kỹ năng</a>
+        <a href="index.html#projects"
+          class="block px-6 py-3 text-gray-300 hover:bg-blue-600 hover:text-white transition">Dự án</a>
+        <a href="index.html#blog"
+          class="block px-6 py-3 text-gray-300 hover:bg-blue-600 hover:text-white transition">Blog</a>
+        <a href="index.html#contact"
+          class="block px-6 py-3 text-gray-300 hover:bg-blue-600 hover:text-white transition">Liên hệ</a>
+      </div>
     </div>
-
   </div>
 </header>

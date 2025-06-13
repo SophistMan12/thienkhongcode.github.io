@@ -1,133 +1,153 @@
 <!DOCTYPE html>
 <html lang="vi" class="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project | MODEL KERASS</title>
-  <!-- Theme Initialization -->
-  <script src="js/theme-init.js"></script>
+  <title>ThienKhongCode | Project-Model-Keras</title>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { darkMode: 'class' }
+    tailwind.config = {
+      darkMode: 'class',
+    }
   </script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
-  <!-- AOS Animation CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+
   <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="font-sans bg-white text-gray-900 dark:bg-[#1f1f1f] dark:text-gray-200">
+
+<body class="font-sans dark:bg-[#1f1f1f] dark:text-gray-200">
 
   <!-- HEADER -->
   <header>
     <div id="header-container"></div>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main class="text-gray-900 dark:text-gray-200">
-    <!-- Giới thiệu -->
-    <section class="max-w-4xl mx-auto py-12 px-4 md:px-0" data-aos="fade-up">
-      <h1 class="text-4xl font-bold mb-4 text-blue-600 dark:text-blue-400">PRO MODEL KERASS</h1>
-      <p class="text-lg mb-6">
-        <strong>PRO MODEL KERASS</strong> là dự án ứng dụng trí tuệ nhân tạo với Keras, giúp xây dựng, huấn luyện và triển khai các mô hình học sâu một cách dễ dàng, trực quan và hiệu quả.
-      </p>
-      <div class="flex flex-wrap gap-4 mb-8">
-        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">#AI</span>
-        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">#Keras</span>
-        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">#DeepLearning</span>
-        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">#Python</span>
+    <div id="particles-js" class="absolute inset-0 -z-10"></div>
+
+    <!-- Overview Section -->
+    <section id="overview" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-20 -mt-5">
+      <div class="text-center md:text-left max-w-xl">
+        <h2 class="text-4xl font-bold mb-4 border-b-4 border-blue-500 inline-block pb-1">Giới thiệu tổng quan về dự án</h2>
+        <p class="text-lg leading-relaxed mt-4">
+          Dự án <strong>Nhận diện hình ảnh sử dụng Keras</strong> là một hệ thống ứng dụng trí tuệ nhân tạo nhằm phân loại và nhận diện các đối tượng trong ảnh. Sử dụng framework Keras (TensorFlow backend), dự án giúp tự động hóa quá trình nhận diện, hỗ trợ các ứng dụng thực tiễn như kiểm tra chất lượng sản phẩm, phân loại vật thể, hoặc nhận diện khuôn mặt.
+        </p>
+        <p class="text-lg font-semibold mt-4 text-red-500">
+          Tình trạng: Đã hoàn thành 10% và đang tiếp tục tối ưu mô hình.
+        </p>
+        <p class="text-lg mt-4">
+          🔗 GitHub: <a href="https://github.com/bang12bang007/ModelKeras" target="_blank" class="text-blue-600 dark:text-blue-400 underline">github.com/bang12bang007/ModelKeras</a>
+        </p>
+      </div>
+
+      <div class="w-full md:w-1/3 max-w-sm rounded-2xl overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700">
+        <img src="image/AnhMobileNetV2.png" alt="Ảnh background dự án Keras" class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105 hover:brightness-110">
       </div>
     </section>
 
-    <!-- Swiper Demo -->
-    <section class="max-w-3xl mx-auto mb-12" data-aos="fade-up">
-      <div class="swiper-container rounded-lg shadow-lg">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="image/keras-demo-1.jpg" alt="Demo 1" class="w-full h-64 object-cover rounded-lg">
-          </div>
-          <div class="swiper-slide">
-            <img src="image/keras-demo-2.jpg" alt="Demo 2" class="w-full h-64 object-cover rounded-lg">
-          </div>
-          <div class="swiper-slide">
-            <img src="image/keras-demo-3.jpg" alt="Demo 3" class="w-full h-64 object-cover rounded-lg">
-          </div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </section>
-
-    <!-- Tính năng -->
-    <section class="max-w-4xl mx-auto mb-12 px-4 md:px-0" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Tính năng nổi bật</h2>
-      <ul class="list-disc list-inside space-y-2 text-lg">
-        <li>Xây dựng mô hình học sâu với giao diện trực quan.</li>
-        <li>Huấn luyện và đánh giá mô hình ngay trên ứng dụng.</li>
-        <li>Hỗ trợ nhiều loại mạng: CNN, RNN, LSTM, Dense,...</li>
-        <li>Xuất và triển khai mô hình dễ dàng.</li>
-        <li>Biểu đồ trực quan hóa quá trình huấn luyện.</li>
-        <li>Tích hợp với các thư viện Python phổ biến: NumPy, Pandas, Matplotlib.</li>
+    <!-- Features Section -->
+    <section id="features" class="min-h-screen flex flex-col justify-start items-start px-6 md:px-20 pt-10">
+      <h2 class="text-4xl font-bold mb-4 border-b-4 border-red-500 pb-2">Các chức năng nổi bật</h2>
+      <ul class="list-disc ml-6 space-y-2 text-lg">
+        <li>Tiền xử lý dữ liệu ảnh (resize, augment, chuẩn hóa).</li>
+        <li>Xây dựng và huấn luyện mô hình CNN bằng Keras.</li>
+        <li>Đánh giá mô hình với các chỉ số chính xác, độ nhạy, độ đặc hiệu.</li>
+        <li>Giao diện demo nhận diện ảnh trực tiếp.</li>
+        <li>Lưu và tải mô hình đã huấn luyện.</li>
       </ul>
     </section>
 
-    <!-- Công nghệ sử dụng -->
-    <section class="max-w-4xl mx-auto mb-12 px-4 md:px-0" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Công nghệ sử dụng</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ul class="space-y-2 text-base">
-          <li><strong>Ngôn ngữ lập trình:</strong> Python</li>
-          <li><strong>Thư viện chính:</strong> Keras, TensorFlow</li>
-          <li><strong>Giao diện người dùng:</strong> Tkinter/PyQt5</li>
+    <!-- Challenges, Advantages, and Results Section -->
+    <section id="challenges-results" class="min-h-screen px-6 md:px-20 py-10">
+      <h2 class="text-4xl font-bold mb-6 border-b-4 border-yellow-500 pb-2">Khó khăn, Thuận lợi và Kết quả</h2>
+
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4 text-red-500">Khó khăn</h3>
+        <ul class="list-disc ml-6 space-y-2 text-lg">
+          <li>Dữ liệu huấn luyện hạn chế, cần nhiều thời gian để thu thập và làm sạch.</li>
+          <li>Việc tối ưu mô hình để đạt độ chính xác cao gặp nhiều thử thách.</li>
+          <li>Thiếu tài nguyên phần cứng (GPU) để huấn luyện mô hình lớn.</li>
         </ul>
-        <ul class="space-y-2 text-base">
-          <li><strong>Trực quan hóa:</strong> Matplotlib, Seaborn</li>
-          <li><strong>Quản lý dữ liệu:</strong> Pandas, NumPy</li>
-          <li><strong>Kiến trúc:</strong> MVC, Modular</li>
+      </div>
+
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4 text-green-500">Thuận lợi</h3>
+        <ul class="list-disc ml-6 space-y-2 text-lg">
+          <li>Keras dễ sử dụng, tài liệu phong phú, cộng đồng hỗ trợ tốt.</li>
+          <li>Nhóm có kiến thức nền tảng về AI và xử lý ảnh.</li>
+          <li>Có thể tận dụng các mô hình pretrained để tăng hiệu quả.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-semibold mb-4 text-blue-500">Kết quả</h3>
+        <ul class="list-disc ml-6 space-y-2 text-lg">
+          <li>Mô hình đạt độ chính xác trên 90% với tập kiểm thử.</li>
+          <li>Giao diện demo hoạt động ổn định, dễ sử dụng.</li>
+          <li>Dễ dàng mở rộng cho các bài toán nhận diện khác.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Liên hệ -->
-    <section class="max-w-4xl mx-auto mb-16 px-4 md:px-0" data-aos="fade-up">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Liên hệ & Đóng góp</h2>
-      <p class="mb-2">📧 Email: <a href="mailto:thienlenin12@gmail.com" class="text-blue-600 dark:text-blue-400 underline">thienlenin12@gmail.com</a></p>
-      <p class="mb-2">🔗 GitHub: <a href="https://github.com/SophistMan12" target="_blank" class="text-blue-600 dark:text-blue-400 underline">github.com/SophistMan12</a></p>
-      <p class="mb-2">📱 Zalo: <a href="https://zalo.me/0908170045" target="_blank" class="text-blue-600 dark:text-blue-400 underline">zalo.me/0908170045 (Đặng Nguyễn Minh Thiện)</a></p>
+    <!-- Technology Floating Box -->
+    <section id="technology" class="fixed bottom-4 right-4 bg-gray-900/80 backdrop-blur-md text-gray-100 p-5 rounded-xl shadow-2xl border border-gray-700 w-72 text-sm z-50">
+      <h2 class="text-lg font-bold mb-3 flex items-center gap-2">
+        <i class="fas fa-tools text-yellow-400"></i> Công nghệ sử dụng
+      </h2>
+      <ul class="space-y-2">
+        <li><span class="font-semibold text-blue-400"><i class="fas fa-code mr-2"></i>Ngôn ngữ:</span> Python</li>
+        <li><span class="font-semibold text-green-400"><i class="fas fa-brain mr-2"></i>Framework:</span> Keras (TensorFlow)</li>
+        <li><span class="font-semibold text-pink-400"><i class="fas fa-laptop-code mr-2"></i>IDE:</span> Jupyter Notebook, VS Code</li>
+        <li><span class="font-semibold text-yellow-300"><i class="fas fa-layer-group mr-2"></i>Cấu trúc:</span> Modular Python Scripts</li>
+        <li><span class="font-semibold text-purple-400"><i class="fas fa-database mr-2"></i>Dữ liệu:</span> Bộ ảnh custom & public datasets</li>
+        <li><span class="font-semibold text-indigo-400"><i class="fas fa-desktop mr-2"></i>Giao diện:</span> Tkinter/Web demo</li>
+      </ul>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="text-center py-6 text-gray-500 text-sm">
-    &copy; 2025 ThienKhongCode. All rights reserved.
+  <footer id="footer" class="text-center py-6 text-gray-500 text-sm bg-[#1f1f1f]">
+    <div class="container mx-auto px-6">
+      <p class="mb-4">📧 Email:
+        <a href="mailto:thienlenin12@gmail.com" class="text-blue-600 dark:text-blue-400 underline">thienlenin12@gmail.com</a>
+      </p>
+      <p class="mb-4">🔗 GitHub:
+        <a href="https://github.com/SophistMan12" target="_blank" class="text-blue-600 dark:text-blue-400 underline">github.com/SophistMan12</a>
+      </p>
+      <p class="mb-4">📱 Zalo:
+        <a href="https://zalo.me/0908170045" target="_blank" class="text-blue-600 dark:text-blue-400 underline">zalo.me/0908170045 (Đặng Nguyễn Minh Thiện)</a>
+      </p>
+      <p>&copy; 2025 ThienKhongCode. All rights reserved.</p>
+    </div>
   </footer>
 
   <!-- Back to Top Button -->
-  <button id="back-to-top" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden flex items-center justify-center">
+  <button id="back-to-top" class="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden">
     <i class="fas fa-arrow-up"></i>
   </button>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/layout.js"></script>
-  <script src="js/theme-toggle.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-    // Swiper
-    var swiper = new Swiper('.swiper-container', {
-      loop: true,
-      pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-    });
-    // Back to Top Button Logic
+
     const backToTopButton = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
@@ -138,6 +158,39 @@
     });
     backToTopButton.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <script>
+    tsParticles.load("particles-js", {
+      particles: {
+        number: { value: 100, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 5, random: true },
+        line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
     });
   </script>
 </body>
